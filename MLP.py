@@ -32,7 +32,7 @@ def accuracy(y_hat, y):
 
 
 def get_dataloader_workers(): 
-    return 4
+    return 0
 
 
 # In[30]:
@@ -141,7 +141,7 @@ def evaluate_accuracy(net, data_iter):
     return metric[0] / metric[1]
 
 
-# In[37]:
+# In[1]:
 
 
 def train_ch3(net, train_iter, test_iter, loss, num_epochs, updater):
@@ -151,7 +151,7 @@ def train_ch3(net, train_iter, test_iter, loss, num_epochs, updater):
         train_metrics = train_epoch_ch3(net, train_iter, loss, updater)
         test_acc = evaluate_accuracy(net, test_iter)
         animator.add(epoch + 1, train_metrics + (test_acc,))
-        print("epoch:",epoch)
+        print("epoch:",epoch + 1)
         print("test_acc",test_acc)
         print("train_loss",train_metrics[0])
         print("train_acc",train_metrics[1])
