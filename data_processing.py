@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[67]:
+# In[2]:
 
 
 import matplotlib.pyplot as plt
@@ -15,7 +15,7 @@ from pandas.core.frame import DataFrame
 import random
 
 
-# In[68]:
+# In[3]:
 
 
 def read_csv(file_names):
@@ -28,7 +28,7 @@ def read_csv(file_names):
     return data_list
 
 
-# In[69]:
+# In[4]:
 
 
 def read_test_csv(file_names):
@@ -41,17 +41,17 @@ def read_test_csv(file_names):
     return data_list
 
 
-# In[70]:
+# In[23]:
 
 
 def filter_data(data_list):
     for i in range(20):
         for j in range(3):
-            data_list[i][0].iloc[:,j] = savgol_filter(list(data_list[i][0].iloc[:,j]), 55, 2, mode= 'nearest')
+            data_list[i][0].iloc[:,j] = savgol_filter(list(data_list[i][0].iloc[:,j]), 5, 2, mode= 'nearest')
     return data_list
 
 
-# In[71]:
+# In[6]:
 
 
 def normalization(data_list):
@@ -63,7 +63,7 @@ def normalization(data_list):
     return data_list
 
 
-# In[72]:
+# In[7]:
 
 
 def show_img(file_names, data_list):
@@ -84,7 +84,7 @@ def show_img(file_names, data_list):
     plt.show()
 
 
-# In[73]:
+# In[8]:
 
 
 def data_preprocessing(data_list):
@@ -96,7 +96,7 @@ def data_preprocessing(data_list):
         data[0] =  data[0].reset_index(drop=True)     
 
 
-# In[89]:
+# In[9]:
 
 
 def data_cut(data_list):
@@ -153,7 +153,7 @@ def data_cut(data_list):
     return cutting_data
 
 
-# In[92]:
+# In[14]:
 
 
 def data_transfer_list(data_list, label):
@@ -190,7 +190,7 @@ def data_transfer_list(data_list, label):
     return image_list, label_list
 
 
-# In[97]:
+# In[24]:
 
 
 # file_names = ['circle', 'comeHere', 'goAway', 'wave']
