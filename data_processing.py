@@ -153,7 +153,7 @@ def data_cut(data_list):
     return cutting_data
 
 
-# In[92]:
+# In[1]:
 
 
 def data_transfer_list(data_list, label):
@@ -164,6 +164,7 @@ def data_transfer_list(data_list, label):
     label_tran_list = []
     cutting_data = []
     cutting_data = data_cut(data_list)
+    random.shuffle(cutting_data) 
     random_index = []
 #     for i in range(len(cutting_data)):
 #         for j in range(len(cutting_data)):
