@@ -1,3 +1,3 @@
-## Please run combine_code.ipynb!!!!
-combine_code.ipynb includes all peoples’ code.
+## Please run combine_code.ipynb!!!!  
+combine_code.ipynb includes all peoples’ code.  
 Github: https://github.com/WuYifan-star/HandGestureRecognition.git
